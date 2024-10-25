@@ -11,10 +11,11 @@ import multiprocessing
 
 # Account credentials (you can add more accounts here)
 accounts = [
-    {"username": "anwarchegg05@gmail.com", "password": "Author@05", "user_bot_chatID": '1155462778', "account_name": "Anwars", "user_bot_token" : "8131045025:AAE9_BMb5i2pk479mubtilbSIUilPA25jWM"},
-    {"username": "sunitha05chegg@gmail.com", "password": "Chegg@050402", "user_bot_chatID": '1155462778', "account_name": "Sunithas", "user_bot_token" : "8131045025:AAE9_BMb5i2pk479mubtilbSIUilPA25jWM"},
-    {"username": "rahulchegg5@gmail.com", "password": "Author@05", "user_bot_chatID": '1155462778', "account_name": "Rahuls", "user_bot_token" : "8131045025:AAE9_BMb5i2pk479mubtilbSIUilPA25jWM"},
-    {"username": "nirupeshcs@icloud.com", "password": "#Hitlin3945", "user_bot_chatID": '1155462778', "account_name": "Nirupeshs", "user_bot_token" : "8131045025:AAE9_BMb5i2pk479mubtilbSIUilPA25jWM"},
+    {"username": "nrama1219@gmail.com", "password": "Bujji@56789", "user_bot_chatID": '809899065', "account_name": "ramu", "user_bot_token" : "7716677970:AAHMAtvPRlzr4Iu3Ob0cNF9LVQ1-YhOmrq0"},
+    {"username": "takeadpay@gmail.com", "password": "Mail@202", "user_bot_chatID": '7091969636', "account_name": "pusph", "user_bot_token" : "8131045025:AAE9_BMb5i2pk479mubtilbSIUilPA25jWM"},
+    {"username": "sakshichoudharysak31@gmail.com", "password": "ihsk@S#31", "user_bot_chatID": '1125920838', "account_name": "Avnish", "user_bot_token" : "8131045025:AAE9_BMb5i2pk479mubtilbSIUilPA25jWM"},
+    {"username": "rahiabrafiq152@gmail.com", "password": "Rent@007", "user_bot_chatID": '1879499039', "account_name": "Umeed", "user_bot_token" : "8131045025:AAE9_BMb5i2pk479mubtilbSIUilPA25jWM"},
+
     # Add more accounts if necessary
 ]
 
@@ -43,15 +44,11 @@ def refresh_account(account):
     flag_login = True
     while flag_login:
         flag_login = login_to_chegg(username, password, driver,account_name)
-    login_texts = f"Login on {account_name}"
-    telegram_bot_sendtext(login_texts,user_bot_token,user_bot_chatID)    
 
 
     # Start refreshing for the account
     refresh_chegg(driver, accept_option, start_time, end_time, user_bot_token, user_bot_chatID, account_name)
-    exit_texts = f"Loop exit on {account_name}"
-    telegram_bot_sendtext(exit_texts,user_bot_token,user_bot_chatID)  
-    
+   
 
 
 if __name__ == "__main__":
